@@ -11,6 +11,9 @@ from datetime import datetime
 from matplotlib import pyplot as plt
 import ast
 
+
+#TODO fix this programming clusterfuck before 6/30
+
 def openstrip(filename):
     try:
         osdf = pd.read_excel(filename)
@@ -66,7 +69,6 @@ df = df[df.status=="ACTIVE"]
 namelist = list(df.name.unique())
 emplist = list(df.emplid.unique())
 '''
-#namelist=['HUGGINS, SHYANNE']
 counter = 0.0
 for i in namelist:
     total_hours = df[df.name==i].hours_appointed.sum()
